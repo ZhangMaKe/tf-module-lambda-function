@@ -42,6 +42,7 @@ module "lambda_function" {
 | Name         | Description |
 |--------------|-------------|
 | function_arn | The ARN of the Lambda function |
+| invoke_arn   | The invocation arn for the Lambda function |
 
 ## Prerequisites
 - [Terraform](https://www.terraform.io/downloads.html) >= 0.13
