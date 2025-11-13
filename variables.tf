@@ -29,3 +29,9 @@ variable "environment_variables" {
   default = {}
   description = "Environment variables for the Lambda function"
 }
+
+variable "use_sqs_dlq" {
+  type = bool
+  default = false
+  description = "boolean, if true creates an sqs queue and configures failed events to be sent to it."
+}
