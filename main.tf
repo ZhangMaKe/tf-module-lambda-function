@@ -22,4 +22,36 @@ resource "aws_lambda_function" "lambda_func" {
   environment {
     variables = var.environment_variables
   }
+
+  dynamic "dead_letter_config" {
+    for_each = var.use_sqs_dlq ? [1] : []
+    content {
+      target_arn = aws_sqs_queue.dlq[0].arn
+    }
+  }
+}
+
+resource "aws_sqs_queue" "dlq" {
+  count = var.use_sqs_dlq ? 1 : 0
+  name = "${var.function_name}-dlq"
+}
+
+resource "aws_sqs_queue_policy" "dlq_policy" {
+  count = var.use_sqs_dlq ? 1 : 0
+  queue_url = aws_sqs_queue.dlq[0].id
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow"
+        Principal = {
+          AWS = var.role_arn
+        }
+        Action = ["sqs:SendMessage"]
+        Resource = aws_sqs_queue.dlq[0].arn
+      }
+    ]
+
+  })
 }
