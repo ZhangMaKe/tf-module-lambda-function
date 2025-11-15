@@ -34,6 +34,10 @@ resource "aws_lambda_function" "lambda_func" {
 resource "aws_sqs_queue" "dlq" {
   count = var.use_sqs_dlq ? 1 : 0
   name = "${var.function_name}-dlq"
+
+  redrive_allow_policy = jsonencode({
+    redrivePermission = "allowAll"
+  })
 }
 
 resource "aws_sqs_queue_policy" "dlq_policy" {
