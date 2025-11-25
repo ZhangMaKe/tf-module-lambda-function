@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/ZhangMaKe/tf-module-lambda-function/compare/v1.2.1...v1.3.0) (2025-11-25)
+
+
+### Features
+
+* added source_dir variable and used either source_file or source_dir based on input ([29bb981](https://github.com/ZhangMaKe/tf-module-lambda-function/commit/29bb9814b3936b5e8ef59cd88338c3e88847d756))
+* Merge pull request [#10](https://github.com/ZhangMaKe/tf-module-lambda-function/issues/10) from ZhangMaKe/feature/support-for-multi-file-functions ([7d2d909](https://github.com/ZhangMaKe/tf-module-lambda-function/commit/7d2d90921065ad77e0fb0146677ac20f28740f24))
+
 ## [1.2.1](https://github.com/ZhangMaKe/tf-module-lambda-function/compare/v1.2.0...v1.2.1) (2025-11-15)
 
 
