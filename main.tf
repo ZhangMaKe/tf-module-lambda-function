@@ -1,6 +1,7 @@
 data "archive_file" "zip_file" {
   type = "zip"
-  source_file = var.source_file
+  source_file = var.source_file != null ? var.source_file : null
+  source_dir = var.source_dir != null ? var.source_dir : null
   output_file_mode = "0666"
   output_path = var.output_path
 }
