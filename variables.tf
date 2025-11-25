@@ -1,6 +1,13 @@
 variable "source_file" {
   type = string
-  description = "path to directory containing the source code"
+  description = "path to file containing the source code (optional, either source_file or source_dir must be provided.)"
+  default = null
+}
+
+variable "source_dir" {
+  type = string
+  description = "path to directory containing the source code and dependencies (optional, either source_file or source_dir must be provided.)"
+  default = null
 }
 
 variable "output_path" {
