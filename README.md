@@ -37,6 +37,7 @@ module "lambda_function" {
 | role_arn              | string       | n/a     | ARN of the IAM role that the Lambda function will assume |
 | enable_tracing        | bool         | true    | Enable X-Ray tracing for the Lambda function |
 | environment_variables | map(string)  | {}      | Environment variables for the Lambda function |
+| layers                | list(string) | []      | A list of lambda layer arns to use for the function
 
 ## Output Variables
 | Name         | Description |

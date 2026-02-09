@@ -16,6 +16,8 @@ resource "aws_lambda_function" "lambda_func" {
   publish         = true
   source_code_hash = data.archive_file.zip_file.output_base64sha256
 
+  layers = var.layers
+
   tracing_config {
     mode = var.enable_tracing == true ? "Active" : "PassThrough"
   }
