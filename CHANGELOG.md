@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/ZhangMaKe/tf-module-lambda-function/compare/v1.3.0...v1.4.0) (2026-02-09)
+
+
+### Features
+
+* added lambda layer support via a 'layers' variable ([5330c26](https://github.com/ZhangMaKe/tf-module-lambda-function/commit/5330c26408d492b902ed7c01969e9b6fcb1e65fa))
+* Merge pull request [#11](https://github.com/ZhangMaKe/tf-module-lambda-function/issues/11) from ZhangMaKe/feat/add-lambda-layer-support ([ffd5242](https://github.com/ZhangMaKe/tf-module-lambda-function/commit/ffd52420e5208df61a3bee3191f308d41bd107aa))
+
 # [1.3.0](https://github.com/ZhangMaKe/tf-module-lambda-function/compare/v1.2.1...v1.3.0) (2025-11-25)
 
 
