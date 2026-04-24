@@ -48,3 +48,9 @@ variable "layers" {
   default = []
   description = "a list of lambda layer arns to use for the function"
 }
+
+variable "include_log_group" {
+  type = bool
+  default = true
+  description = "whether or not to create the cloudwatch logs group for the function"
+}

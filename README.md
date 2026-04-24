@@ -38,6 +38,7 @@ module "lambda_function" {
 | enable_tracing        | bool         | true    | Enable X-Ray tracing for the Lambda function |
 | environment_variables | map(string)  | {}      | Environment variables for the Lambda function |
 | layers                | list(string) | []      | A list of lambda layer arns to use for the function
+| include_log_group.    | bool.        | true    | Whether or not to create the cloudwatch logs group for the function
 
 ## Output Variables
 | Name         | Description |
