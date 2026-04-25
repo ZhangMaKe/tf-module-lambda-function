@@ -1,3 +1,11 @@
+# [1.5.0](https://github.com/ZhangMaKe/tf-module-lambda-function/compare/v1.4.0...v1.5.0) (2026-04-25)
+
+
+### Features
+
+* Added cloudwatch log group and boolean var to determine creations. Updated logs ([084b91a](https://github.com/ZhangMaKe/tf-module-lambda-function/commit/084b91a806a7777a1f26940c4e5d61067f9e10b5))
+* Merge pull request [#12](https://github.com/ZhangMaKe/tf-module-lambda-function/issues/12) from ZhangMaKe/feat/include-cw-log-group ([75bcde9](https://github.com/ZhangMaKe/tf-module-lambda-function/commit/75bcde9d567bff607ae2964ee1accd29e5a2ceb8))
+
 # [1.4.0](https://github.com/ZhangMaKe/tf-module-lambda-function/compare/v1.3.0...v1.4.0) (2026-02-09)
 
 
